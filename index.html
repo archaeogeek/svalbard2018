@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Try Open Source- it's good for you!</title>
+
+		<meta name="description" content="A talk on open source to UCL Postgrads in 2018">
+		<meta name="author" content="Jo Cook">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+			<section>
+
+					<h1>Try Open Source</h1>
+					<h2>It's good for you!</h2>
+					<br />
+					<h3 style="text-transform:uppercase">UCL, 2018</h3>
+						<p class='nobreak'><a href="http://about.me/jocook">Jo Cook</a> / <a href="http://twitter.com/archaeogeek">@archaeogeek</a></p>
+			</section>
+				
+			<section>
+				<h3>Follow along at <a href="http://archaeogeek.github.io/UCL2018">archaeogeek.github.io/UCL2018</a></h3>
+			</section>
+
+				<section>
+					<h2>The Ubiquitous Talk Outline Slide</h2>
+						<ol>
+							<li>Some context</li>
+							<li>Different ways of working with Open Source, and why you should</li>
+							<li>Top tips</li>
+							<li>Taking things further</li>
+						</ol>
+				</section>
+
+				<section data-background="./images/kirkbylonsdale.png" data-background-position="bottom">
+				<h2 style="color:black">Who is this person?</h2>
+				<h3 style="color:black" class="fragment">Not your average "industry" career path</h3>
+				</section>
+
+				<section data-background="./images/jo_diving.JPG" data-background-position="top">
+					<p style="color:black">I studied Mathematics at the University of Durham, then Underwater Archaeology at the University of St Andrews, worked as a land archaeologist with Oxford Archaeology for 10 years, and then began work as a GIS consultant <strike>6</strike> 7 years ago.</p>
+					<p style="color:black" class="fragment">Maths &rarr; Underwater Archaeology &rarr; Land Archaeology &rarr; GIS Consultant &equals; No qualifications in GIS!</p>
+					<p style="color:black" class="fragment">... just nearly 20 years experience in GIS, and 12(ish) using open source</p>
+				</section>
+
+				<section>
+					<p>I work as a consultant and metadata lead at <a target="new" href="https://astuntechnology.com">Astun Technology</a>.</p>					
+					<p>Astun are a small firm, with <strike>20</strike> 21 staff. We're based in Epsom but have staff spread across the UK and abroad.</p>
+					<p>We provide web-based GIS products to local authorities, government departments, and commercial firms.</p>
+					<img class="center" src="./images/teamphoto_2.jpg" alt="team photo" width="800">
+				</section>
+
+				<section>
+					<p>... More about Astun Technology shortly</p>
+					<img class="center" src="./images/ASTUN_LOGO.png" alt="Astun Logo">
+				</section>
+
+				<section>
+					<h2>My other GIS creds</h2>
+					<p class="fragment">I'm the founder and current chair of the <a target="new" href="https://uk.osgeo.org">UK chapter of the Open Source Geospatial Foundation</a></p>
+					<p class="fragment">and the creator and maintainer of <a target="new" href="https://portablegis.xyz">Portable GIS</a></p>
+					<img class="fragment" class="center" src="./images/multicolour-osgeo.png" alt="logos" width="600" style="border:none">
+				</section> 
+
+			
+			
+
+				<section>
+					<h2>So what do I mean when I talk about working with "Open Source"?</h2>
+					<p class="fragment">Companies built around Open Source software?</p>
+					<p class="fragment">Yes, but also...</p>
+					<p class="fragment">Using Open Source <b>technologies and ideas</b> in your day to day work</p>
+					<p class="fragment">aka, becoming a good open citizen</p>
+				</section>
+				
+
+				<section>
+					<h2>Building a company around Open Source GIS software</h2>
+					<img class="center" src="./images/iShare_intro.jpg" alt="Software" width="400">
+				</section>
+
+				<section>
+					<p>Astun Technology's primary product suite is iShare- a web-based GIS solution for local authorities, based on open source software. 
+					<img class="center" src="./images/astun_software.png" alt="Software" width="800">
+					<aside class="notes">iShare is used by more than 30 local authorities (district and county), as well as emergency services, and housing associations</aside>
+				</section>
+
+				<section>
+					<p>See <a href="http://mydistrict.chichester.gov.uk/mycdc.aspx" target="new">My Chichester</a> as an example.</p>
+					<img class="center" src="./images/mychichester.png" alt="My Chichester" width="600">
+				</section>
+
+				<section>
+					<h2>What packages do we use?</h2>
+					<p>iShare is built around PostgreSQL and PostGIS, OpenLayers, Mapserver, and OGR. We also work with Geonetwork, QGIS, Leaflet, Geoserver, Java, and use <b>lots</b> of Python</p>
+					<img class="center" src="./images/Mentoring_New_1.jpg" alt="Software" width="400">
+				</section>
+
+				<section>
+					<h2>But what do we do, exactly?</h2>
+					<p class="fragment">(It's more than just installing software and importing data)</p>
+				</section>
+
+				<section>
+					<h2>Example: Wrangling NHS Choices Data</h2>
+					<p>On the NHS website, data is <a target="new" href="https://www.nhs.uk/service-search/GP/LA1-4UR/Results/4/-2.7964141368866/54.0406799316406/4/0?distance=25">searchable by postcode</a></p>
+					<img class="center" src="./images/nhs_choices.png" alt="NHS Choices" width="800">
+				</section>
+
+				<section>
+					<h2>Processing Workflow</h2>
+					<img class="center" src="./images/nhs_choices_loader.png" alt="NHS Choices Data Loading" width="800">
+				</section>
+
+				<section>
+					<h2>Result</h2>
+					<img class="center" src="./images/nhs_choices_sndc.png" alt="NHS Choices on MyMaps" width="600">
+				</section>
+
+				
+				<section>
+					<h2>Metadata Management</h2>
+					<p>We also provide metadata solutions to allow local authorities meet their INSPIRE requirements, and <a href="https://www.spatialdata.gov.scot/geonetwork/srv/eng/catalog.search#/home" target="new">complete metadata portals</a> for larger clients.</p>
+					<img class="center" src="./images/ssdi.png" alt="SSDI" width="800">
+				</section>
+
+				<section>
+					<h2>Example: Metadata Workflow at EA/DEFRA</h2>
+					<img class="center" src="./images/ea_geonetwork.png" alt="EA metadata architecture" width="600">
+				</section>
+		
+
+				<section>
+					<p>We contribute back by committing bug fixes, enhancements, and documentation to <b>all</b> the projects we use.</p>
+					<p class="fragment">We also sponsor the development of new features, help organising conferences, and so on</p>
+					<img class="fragment"  class="center" src="./images/openstandards.png" alt="Open" width="400" style="border:none">
+				</section>
+
+
+				<section data-background="./images/training_2.jpg" data-background-position="top" class="full">
+					<p style="color:black" class="fragment">We also do bespoke work, training, and hackathons</p>
+				</section>
+				
+				<section>
+					<h2>It's not all GIS!</h2>
+					<p class="fragment">Day to day work is as much about configuring websites, databases and virtual servers as it is about doing actual GIS</p>
+				</section>
+				<section data-background="./images/open_closed.jpg" class="full">
+					<h2 style="color:black">But how do we make money?</h2>
+					<p style="color:black" class="fragment">Our products are all based on open source, which is free, so where's the catch?</p>
+					<small style="color:black" class="attribution" style="color:black">Flickr:cogdogblog CC-BY-2.0</small>
+				</section>
+				
+				<section>
+				<h2>Fact: Open source is not about money</h2>
+				<p>Open source is purely about <a href="https://opensource.org/osd" target="new">not restricting access to the source code</a>, preserving the author's integrity, and not discriminating against people, or specific use-cases. There's no limitation on charging for development of solutions based on that code</p>
+				</section>
+				
+				<section>
+				<h2>Fact: Open source is not even free</h2>
+				<p>As long as you provide the source code of the core software under it's original license, you can, <b>and should</b>, charge for adding value, such as development, installation, consultancy, training, maintenance... </p>
+				</section>
+
+				<section>
+				<h2>Confession</h2>
+				<p class="fragment">We don't do <b>everything</b> with open source</p>
+				<p class="fragment">We use Google for email, Amazon for our virtual servers, and even pay for software sometimes!</p>
+				</section>
+				
+				<section data-background="./images/employment.jpg" class="full">
+				<h2 style="color:black">Using Open <strike>Source</strike> in your day to day work</h2>
+				<small class="attribution" style="color:black">Flickr: Colin</small>
+				</section>
+
+				<section>
+				<h2>Key Point: Lightweight and Innovative</h2>
+				<p class="fragment">Look for flexible lightweight solutions rather than complex monolithic ones</p>
+				<p class="fragment">Learn to be flexible yourself, and open to new opportunities or technologies, whether open source or proprietary</p>
+				<aside class="notes">Open source technology enables continuous innovation, as it is built by a community of developers who are passionate about software development. In an open source community, developers never stop looking for ways to make their software better. They quickly deploy new, innovative features and will hold each other in check through continuous inspection. Their collaborative mindset leads to more effective technologies that are better positioned to evolve with emerging concepts.</aside>
+				</section>
+
+				<section>
+				<h2>Avoid "lock-in"</h2>
+				<p>This applies to both software <b>and</b> skills</p>
+				<img class="center" src="./images/flexible.png" alt="perl and idl">
+				</section>
+
+
+				<section>
+				<h2>Aim for continuous improvement</h2>
+				<p>Constantly look for opportunities to learn something new and/or get better</p>
+				<p class="fragment">This will stop you getting bored for a start!</p>
+				<img class="fragment" class="center" src="./images/always_be_improving.png" alt="My desk" width="600" style="border:none">
+				</section>
+				
+				<section data-background="./images/crank_handle.jpg" class="full">
+				<h2 class="fragment" style="color:black">Ask difficult questions</h2>
+				<p style="color:black" class="fragment">Such as "Why?"</p>
+				<p style="color:black" class="fragment">Because something has been done the same way for decades doesn't mean it's the best way now</p>
+				<small style="color:black" class="attribution" style="color:black">Wikimedia Commons CC-BY-SA-2.5</small>
+				</section>
+				
+				<section><h2>Top Tips</h2></section>
+
+				<section data-background="./images/ninja_kitty.jpg" class="full">
+					<h2 class="fragment"  style="color:white">Warning!</h2>
+					<p style="color:white" class="fragment">I'm not going to recommend any particular software</p>
+					<p style="color:white" class="fragment">I shouldn't have to tell you to use QGIS or PostgreSQL, or even Python these days</p>
+					<p class="fragment" style="color:white">I'm going to recommend skills that are useful to you whatever you choose to do</p>
+					<small style="color:white" class="attribution">Imjur: ID Cfe5FMt</small>
+				</section>
+
+				<section  data-background="./images/jos_cli.png" class="full">
+					<h2 class="fragment" style="color:white">The command prompt!</h2>
+					<p class="fragment" style="color:white">Essential for communicating with remote servers, running low-level tools, and often so much quicker than a GUI</p></section>
+				
+				<section  data-background="./images/scripting.jpg" class="full">
+					<h2 class="fragment" style="color:white">Scripting!</h2>
+					<p class="fragment" style="color:white">If you need to repeat something, write a script to do it</p>
+					<small style="color:white" class="attribution">Flickr: Christiaan Colen CC-BY-SA-2.0</small>
+				</section>
+				
+				<section>
+					<h2>Version control!</h2>
+					<p class="fragment">Much more than just code</p>
+					<p class="fragment"><a target="blank" href="https://gitlab.com/archaeogeek/archaoegeek.hugo">host websites</a></p>
+					<p class="fragment"><a target="blank" href="https://gitlab.com/archaeogeek/dotfiles">create automated backups of your files</a></p>
+					<p class="fragment"><a target="blank" href="http://resume.github.io/?archaeogeek">auto-create your resume...</a></p>
+				</section>
+				
+				<section data-background="./images/doco.JPG" class="full">
+					<h2 class="fragment"  style="color:black">Documentation!</h2>
+					<p class="fragment" style="color:black">Learn to write clear, concise documentation, for yourself and the next person who works on your project</p>
+					<small class="attribution" style="color:black">Wikimedia: Marta Pucciarelli CC-BY-SA-3.0</small>
+				</section>
+				
+				<section data-background="./images/trainwreck.jpg" class="full">
+					<h2 class="fragment" style="color:black">Management!</h2>
+					<p class="fragment" style="color:black">Learn to manage yourself, your time, and the tasks on your project. Know when you are going "out of scope"</p>
+					<small class="attribution" style="color:black">Wikimedia Commons Public Domain</small>
+				</section>
+
+				<section>
+					<h2>Taking things further</h2>
+				</section>
+
+				<section>
+					<h2>Create your own tips and tricks repository</h2>
+					<p class="fragment">Like <a target="new" href="https://github.com/jbranchaud/til">TIL</a></p>
+					<p class="fragment">This will teach you version control and scripting, as well as being really handy</p>
+				</section>
+
+				<section>
+					<h2>Use tools like <a target="new" href="https://www.pgcli.com/">pgcli</a></h2>
+					<img class="center" src="./images/pgcli.png" alt="pgcli" width="600">
+					<p class="fragment">This will teach you python, installing virtual environments, SQL and CLI all at the same time</p>
+					<p class="fragment">(A version for MySQL is also available)</p>
+
+				</section>
+
+				<section>
+					<h2>Learn how to contribute to OSS</h2>
+					<p class="fragment">See <a target="new" href="https://github.com/freeCodeCamp/how-to-contribute-to-open-source/issues?q=is%3Aissue+is%3Aopen+label%3Afirst-timers-only">Free Code Camp's "How to Contribute to Open Source"</a> for example</p>
+				</section>
+
+				<section>
+					<h2>Help with QGIS</h2>
+					<p class="fragment">See <a target="new" href="https://github.com/qgis/QGIS-Documentation/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22QGIS+3.0%22">QGIS 3.0 Documentation Issues</a> filtered by tag</p>
+				</section>
+
+				<section>
+					<h2>Submit (good) bug reports</h2>
+					<img class="center" src="./images/bugreport.png" alt="Bug Report">
+				</section>
+
+
+				<section>
+					<h2>Summing Up</h2>
+				</section>
+
+				<section>
+					<h2>I'm probably the last person who should give careers advice!</h2>
+					<p class="fragment">but working in GIS these days requires a wide skillset</p>
+					<p class="fragment">and whatever your path, the sorts of skills and tools I've talked about today will help</p>
+				</section>
+
+				<section data-background-image="./images/tumbleweed.jpg" class="full">
+					<h2 style="color:white">Questions?</h2>
+					<small class="attribution" style="color:white">Flickr: Jez Arnold CC BY-SA 2.0</small>
+				</section>
+
+				<section data-background-image="./images/thankyoubag.jpg" class="full">
+					<h2 style="color:black">Thank You!</h2>
+					<small class="attribution" style="color:black">Flickr: Xelipe CC BY-NC-SA 2.0</small>
+				</section>
+
+				<section>
+				<h3>Find this at <a href="http://archaeogeek.github.io/UCL2018">archaeogeek.github.io/UCL2018</a>
+					<p>and find me at <p class='nobreak'><a href="http://about.me/jocook">about.me/jocook</a> | <a href="http://twitter.com/archaeogeek">@archaeogeek</a></p></h3>
+				</section>
+				
+				
+			
+					
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
