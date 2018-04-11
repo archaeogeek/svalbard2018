@@ -18,7 +18,7 @@
   color:#727272;
 }
 
-.reveal h2 {
+.reveal h1, h2 {
 	font-weight: bold !important;
   color:#727272;
   background: rgba(255, 255, 255, 0.25);
